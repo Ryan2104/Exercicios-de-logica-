@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        double vg, ct, g, a;
+        Console.Write("Qual o tipo do carro (alcool ou gasolina): ");
+        string tc = (Console.ReadLine());
+        Console.Write("total do tanque do carro: ");
+        ct = double.Parse(Console.ReadLine());
+        g = 1.80;
+        a = 1.00;
+        if (tc == "gasolina" ^ tc == "Gasolina" ^ tc == "GASOLINA")
+        {
+            vg = ct * g;
+            Console.Write("o valor será de: R${0}", vg);
+        }
+      else if (tc == "alcool")
+        {
+            vg = ct * a;
+            Console.Write("o valor será de: R${0}", vg);
+        }
+        else
+            Console.Write("resposta invalida");
+
+
+    }
+}
